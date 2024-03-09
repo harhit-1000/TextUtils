@@ -4,10 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './component/Navbar'
 import TextForm from './component/TextForm'
-import AboutUs from './component/AboutUs'
+// import AboutUs from './component/AboutUs'
 import Alert from './component/Alert'
-import {BrowserRouter as Router} from "react-router-dom"
-import { Route, Routes } from "react-router-dom";
+// import {BrowserRouter as Router} from "react-router-dom"
+// import { Route, Routes } from "react-router-dom";
 function App() {
   const [alert, setAlert] = useState(null);
 
@@ -38,16 +38,17 @@ function App() {
   }
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar title="textutilss" aboutText="About us" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className='container my-3'>
-        <Routes>
+        <TextForm heading="Enter text to analysis" mode={mode} showAlert={showAlert} />
+        {/* <Routes>
           <Route exact path='/' element={<TextForm heading="Enter text to analysis" mode={mode} showAlert={showAlert} />}/>
-          <Route exact path='/about' element={<AboutUs />}/>
-        </Routes>
+          <Route exact path='/about' element={<AboutUs />}/> */}
+        {/* </Routes> */}
         </div>
-      </Router>
+      {/* </Router> */}
 
     </>
   )

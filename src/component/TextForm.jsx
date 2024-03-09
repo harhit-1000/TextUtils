@@ -20,7 +20,7 @@ export default function TextForm(props) {
   const handleLoClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
-    props.showAlert("Text is converted into owercase ","success");
+    props.showAlert("Text is converted into lowercase ","success");
 
   };
 
